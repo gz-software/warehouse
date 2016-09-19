@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DCommon.LinqToNPOI</name>
+    </assembly>
+    <members>
+        <member name="M:DCommon.LinqToNPOI.Writer.ExcelExporter.Save(System.IO.Stream)">
+            <summary>
+            Save excel.
+            </summary>
+        </member>
+    </members>
+</doc>

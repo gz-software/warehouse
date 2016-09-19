@@ -1,0 +1,79 @@
+﻿<!-- EXCEL导出数据（Export  Modal） -->
+
+<div class="modal fade" id="epacketModal" tabindex="-1" role="dialog" aria-labelledby="epacketModalLabel" aria-hidden="true">
+    <div class="modal-dialog" style="width:98%;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="epModalLabel">
+                    @LangHelper.Get("Epacket_Label_EpacketShipmentInformation")
+                </h4>
+            </div>
+
+            <div class="modal-body" style="align-content:center">
+                <form class="form-horizontal" id="ekForm">
+
+                    <div class="panel panel-success" style="width:100%">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">Status Info</h3>
+                        </div>
+                        <div class="panel-body">
+
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label">Track Code</label>
+                                <div class="col-sm-5">
+                                    <input name="TrackCode" value="" class="form-control" readonly />
+                                </div>
+
+                                <label class="col-sm-1 control-label">Update Date</label>
+                                <div class="col-sm-5">
+                                    <input name="UpdateDateLayout" value="" class="form-control" readonly />
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="panel panel-success" style="width:100%">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">Ship From Address</h3>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="form-group">
+                                        <label class="col-sm-1 control-label">Email</label>
+                                        <div class="col-sm-5">
+                                            <input name="ShipData.PackageData.ShipFromAddress[0].Email" value="" class="form-control" readonly />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="panel panel-success" style="width:100%">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title">Ship To Address</h3>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="form-group">
+                                        <label class="col-sm-1 control-label">Email</label>
+                                        <div class="col-sm-5">
+                                            <input name="ShipData.PackageData.ShipToAddress[0].Email" value="" class="form-control" readonly />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div><!-- /.modal-body -->
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" id="ekCloseBtn" onclick="ekModalClose();">@LangHelper.Get("Common_Button_Close")</button>
+                <button type="button" class="btn btn-success"  id="ekGetLabelBtn" onclick="ekGetLabel()">@LangHelper.Get("Epacket_Button_GetLabel")</button>
+                <button type="button" class="btn btn-primary"  id="ekConfirmBtn" onclick="ekConfirm()">@LangHelper.Get("Epacket_Button_ConfirmPackage")</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

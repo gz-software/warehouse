@@ -1,0 +1,612 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Inventory_Entity_Avail" xml:space="preserve">
+    <value>可用</value>
+  </data>
+  <data name="Inventory_Entity_DiffSum" xml:space="preserve">
+    <value>差异</value>
+  </data>
+  <data name="Inventory_Entity_InSum" xml:space="preserve">
+    <value>收总</value>
+  </data>
+  <data name="Inventory_Entity_OnIn" xml:space="preserve">
+    <value>在途入</value>
+  </data>
+  <data name="Inventory_Entity_OnOut" xml:space="preserve">
+    <value>在途出</value>
+  </data>
+  <data name="Inventory_Entity_OutSum" xml:space="preserve">
+    <value>出总</value>
+  </data>
+  <data name="Inventory_Entity_ShipMiss" xml:space="preserve">
+    <value>运输遗失</value>
+  </data>
+  <data name="Inventory_Entity_SwAvail" xml:space="preserve">
+    <value>智能可用</value>
+  </data>
+  <data name="Product_Entity_Description" xml:space="preserve">
+    <value>描述</value>
+  </data>
+  <data name="Product_Entity_Price" xml:space="preserve">
+    <value>价格</value>
+  </data>
+  <data name="Product_Entity_ShortTitle" xml:space="preserve">
+    <value>产品名称</value>
+  </data>
+  <data name="Product_Entity_SKU" xml:space="preserve">
+    <value>SKU</value>
+  </data>
+  <data name="Store_Entity_Title" xml:space="preserve">
+    <value>产品长名称</value>
+  </data>
+  <data name="Store_Entity_Name" xml:space="preserve">
+    <value>仓库名称</value>
+  </data>
+  <data name="Store_Entity_Type" xml:space="preserve">
+    <value>仓库类型</value>
+  </data>
+  <data name="Base_Entity_ID" xml:space="preserve">
+    <value>编号</value>
+  </data>
+  <data name="Base_Entity_UpdateDateLayout" xml:space="preserve">
+    <value>更新时间</value>
+  </data>
+  <data name="Store_Entity_Type_Enum_SmartWarehouse" xml:space="preserve">
+    <value>智能仓</value>
+  </data>
+  <data name="Store_Entity_Type_Enum_SolidStore" xml:space="preserve">
+    <value>传统仓</value>
+  </data>
+  <data name="Inventory_Label_SearchTools" xml:space="preserve">
+    <value>查询</value>
+  </data>
+  <data name="Inventory_Label_Stores" xml:space="preserve">
+    <value>仓库</value>
+  </data>
+  <data name="Common_Button_Search" xml:space="preserve">
+    <value>查询</value>
+  </data>
+  <data name="Inventory_Label_Inventories" xml:space="preserve">
+    <value>库存列表</value>
+  </data>
+  <data name="Common_DataTable_Label_info" xml:space="preserve">
+    <value>第 _PAGE_ 页 ( 总共 _PAGES_ 页 )</value>
+  </data>
+  <data name="Common_DataTable_Label_infoEmpty" xml:space="preserve">
+    <value>无记录</value>
+  </data>
+  <data name="Common_DataTable_Label_infoFiltered" xml:space="preserve">
+    <value>(从 _MAX_ 条记录过滤)</value>
+  </data>
+  <data name="Common_DataTable_Label_lengthMenu" xml:space="preserve">
+    <value>每页 _MENU_ 条记录</value>
+  </data>
+  <data name="Common_DataTable_Label_paginate_first" xml:space="preserve">
+    <value>首页</value>
+  </data>
+  <data name="Common_DataTable_Label_paginate_last" xml:space="preserve">
+    <value>尾页</value>
+  </data>
+  <data name="Common_DataTable_Label_paginate_next" xml:space="preserve">
+    <value>下一页</value>
+  </data>
+  <data name="Common_DataTable_Label_paginate_previous" xml:space="preserve">
+    <value>上一页</value>
+  </data>
+  <data name="Common_DataTable_Label_zeroRecords" xml:space="preserve">
+    <value>没有找到记录</value>
+  </data>
+  <data name="Common_Button_Reset" xml:space="preserve">
+    <value>重置</value>
+  </data>
+  <data name="Inventory_Entity_OnHold" xml:space="preserve">
+    <value>锁定</value>
+  </data>
+  <data name="Common_Label_All" xml:space="preserve">
+    <value>所有</value>
+  </data>
+  <data name="Delivery_Button_Inbound" xml:space="preserve">
+    <value>入库</value>
+  </data>
+  <data name="Delivery_Button_Outbound" xml:space="preserve">
+    <value>出库</value>
+  </data>
+  <data name="Excel_Button_Export" xml:space="preserve">
+    <value>导出</value>
+  </data>
+  <data name="Excel_Button_Import" xml:space="preserve">
+    <value>导入</value>
+  </data>
+  <data name="Common_Button_Add" xml:space="preserve">
+    <value>新增</value>
+  </data>
+  <data name="Common_Button_Close" xml:space="preserve">
+    <value>关闭</value>
+  </data>
+  <data name="Common_Button_Delete" xml:space="preserve">
+    <value>删除</value>
+  </data>
+  <data name="Common_Button_Submit" xml:space="preserve">
+    <value>提交</value>
+  </data>
+  <data name="Common_Button_ShowPostData" xml:space="preserve">
+    <value>显示数据</value>
+  </data>
+  <data name="Delivery_Button_Process" xml:space="preserve">
+    <value>处理</value>
+  </data>
+  <data name="Delivery_Label_Carriers" xml:space="preserve">
+    <value>运输方式</value>
+  </data>
+  <data name="Delivery_Label_DON" xml:space="preserve">
+    <value>状态</value>
+  </data>
+  <data name="Delivery_Label_FromStore" xml:space="preserve">
+    <value>发出仓</value>
+  </data>
+  <data name="Delivery_Label_OutQty" xml:space="preserve">
+    <value>出货数量</value>
+  </data>
+  <data name="Delivery_Label_Product" xml:space="preserve">
+    <value>产品</value>
+  </data>
+  <data name="Delivery_Label_SKU" xml:space="preserve">
+    <value>SKU</value>
+  </data>
+  <data name="Delivery_Label_ToStore" xml:space="preserve">
+    <value>目的仓</value>
+  </data>
+  <data name="Common_Button_Save" xml:space="preserve">
+    <value>保存</value>
+  </data>
+  <data name="Delivery_Button_Cancel" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="Delivery_Button_Delete" xml:space="preserve">
+    <value>删除</value>
+  </data>
+  <data name="Delivery_Button_Ship" xml:space="preserve">
+    <value>发货</value>
+  </data>
+  <data name="Delivery_Label_NewDelivery" xml:space="preserve">
+    <value>新单</value>
+  </data>
+  <data name="Delivery_Label_OutboundDelivery" xml:space="preserve">
+    <value>出库</value>
+  </data>
+  <data name="Delivery_Entity_Status_Enum_BadOrder" xml:space="preserve">
+    <value>坏单</value>
+  </data>
+  <data name="Delivery_Entity_Status_Enum_Cancel" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="Delivery_Entity_Status_Enum_Delivering" xml:space="preserve">
+    <value>运输中</value>
+  </data>
+  <data name="Delivery_Entity_Status_Enum_New" xml:space="preserve">
+    <value>新建货运单</value>
+  </data>
+  <data name="Delivery_Entity_Status_Enum_Processing" xml:space="preserve">
+    <value>处理中</value>
+  </data>
+  <data name="Delivery_Entity_Status_Enum_Received" xml:space="preserve">
+    <value>已收货</value>
+  </data>
+  <data name="Delivery_Entity_Status_Enum_Submited" xml:space="preserve">
+    <value>提交</value>
+  </data>
+  <data name="Delivery_Entity_Status_Enum_Success" xml:space="preserve">
+    <value>成功</value>
+  </data>
+  <data name="Menu_Label_Delivery" xml:space="preserve">
+    <value>货运管理</value>
+  </data>
+  <data name="Menu_Label_Employee" xml:space="preserve">
+    <value>当前用户</value>
+  </data>
+  <data name="Menu_Label_Home" xml:space="preserve">
+    <value>首页</value>
+  </data>
+  <data name="Menu_Label_Inventory" xml:space="preserve">
+    <value>库存管理</value>
+  </data>
+  <data name="Menu_Label_Log" xml:space="preserve">
+    <value>日志</value>
+  </data>
+  <data name="Menu_Label_MapRule" xml:space="preserve">
+    <value>导入导出规则设置</value>
+  </data>
+  <data name="Menu_Label_Setting" xml:space="preserve">
+    <value>设置</value>
+  </data>
+  <data name="Menu_Label_Store" xml:space="preserve">
+    <value>仓库设置</value>
+  </data>
+  <data name="Delivery_Label_Outbound_AddMsg" xml:space="preserve">
+    <value>请从库存列表选择一些记录，然后点击【出库】增加。</value>
+  </data>
+  <data name="Delivery_Label_InboundDelivery" xml:space="preserve">
+    <value>入库</value>
+  </data>
+  <data name="Delivery_Label_InQty" xml:space="preserve">
+    <value>入货数量</value>
+  </data>
+  <data name="Delivery_Entity_Status_Enum_Error" xml:space="preserve">
+    <value>异常</value>
+  </data>
+  <data name="Delivery_Label_Inbound_AddMsg" xml:space="preserve">
+    <value>请从库存列表选择一些记录，然后点击【入库】增加。</value>
+  </data>
+  <data name="Delivery_Button_Receive" xml:space="preserve">
+    <value>确认收货</value>
+  </data>
+  <data name="Delivery_Button_Finish" xml:space="preserve">
+    <value>结单</value>
+  </data>
+  <data name="Delivery_Avail_Not_Enough" xml:space="preserve">
+    <value>货仓{0}存余量信息不足,您发出的SKU: {1} ,只剩下: {2}</value>
+  </data>
+  <data name="Product_Empty" xml:space="preserve">
+    <value>商品{0}在发货仓{1} 已经为空 </value>
+  </data>
+  <data name="Delivery_Result_Error_SrcStoreCannotEqualTarStore" xml:space="preserve">
+    <value>发货仓不能与收货仓相同</value>
+  </data>
+  <data name="DeliveryLog_Entity_Type_Enum_Adjustment" xml:space="preserve">
+    <value>由库存调整影响</value>
+  </data>
+  <data name="DeliveryLog_Entity_Type_Enum_Delivery" xml:space="preserve">
+    <value>由货运单影响</value>
+  </data>
+  <data name="DeliveryLog_Entity_Type_Enum_Import" xml:space="preserve">
+    <value>由导入影响</value>
+  </data>
+  <data name="MapRule_Entity_DataType_Enum_Delivery" xml:space="preserve">
+    <value>货运记录</value>
+  </data>
+  <data name="MapRule_Entity_DataType_Enum_Inventory" xml:space="preserve">
+    <value>库存记录</value>
+  </data>
+  <data name="MapRule_Entity_AssType_Enum_Export" xml:space="preserve">
+    <value>导出</value>
+  </data>
+  <data name="MapRule_Entity_AssType_Enum_Import" xml:space="preserve">
+    <value>导入</value>
+  </data>
+  <data name="Common_Button_Browse" xml:space="preserve">
+    <value>浏览</value>
+  </data>
+  <data name="Common_Button_Import" xml:space="preserve">
+    <value>导入</value>
+  </data>
+  <data name="Excel_Label_UploadFile" xml:space="preserve">
+    <value>上传文件</value>
+  </data>
+  <data name="MapRule_Label_Description" xml:space="preserve">
+    <value>描述</value>
+  </data>
+  <data name="MapRule_Label_MappingRule" xml:space="preserve">
+    <value>规则</value>
+  </data>
+  <data name="MapRule_Label_MapRuleItemsPreview" xml:space="preserve">
+    <value>规则预览</value>
+  </data>
+  <data name="ExcelHelper_Result_Error_ImportColumnError" xml:space="preserve">
+    <value>列名: {0} ,第 {1} 行数据是NULL</value>
+  </data>
+  <data name="ExcelHelper_Result_Error_ImportFileError" xml:space="preserve">
+    <value>导入Excel文件异常</value>
+  </data>
+  <data name="ExcelHelper_Result_Error_ImportRowError" xml:space="preserve">
+    <value>第 {0} 行的数据有问题</value>
+  </data>
+  <data name="Inventory_Result_Error_ImportSkuNotExist" xml:space="preserve">
+    <value>SKU: {0}  不存在</value>
+  </data>
+  <data name="Inventory_Result_Error_ImportStoreNoSelect" xml:space="preserve">
+    <value>请选择要导入的仓库</value>
+  </data>
+  <data name="Inventory_Result_Success_ExportSuccess" xml:space="preserve">
+    <value>导出完成:  总共 - {0}  成功 - {1}</value>
+  </data>
+  <data name="Inventory_Result_Success_ImportSuccess" xml:space="preserve">
+    <value>导入完成:  总共 - {0}  成功 - {1}</value>
+  </data>
+  <data name="FileData_Entity_FileType_Enum_CSV" xml:space="preserve">
+    <value>.csv 格式</value>
+  </data>
+  <data name="FileData_Entity_FileType_Enum_XLS" xml:space="preserve">
+    <value>.xls excel 2003 格式</value>
+  </data>
+  <data name="FileData_Entity_FileType_Enum_XLSX" xml:space="preserve">
+    <value>.xlsx excel 2007 或以上格式</value>
+  </data>
+  <data name="FileData_Entity_ProcessType_Enum_All" xml:space="preserve">
+    <value>全部 - 处理整个文件, 通过SKU更新库存，如果发现指定的仓库没有库存记录，则自动创建一条</value>
+  </data>
+  <data name="FileData_Entity_ProcessType_Enum_NewOnly" xml:space="preserve">
+    <value>只处理新建 - 只创建SKU在指定仓库没有库存的记录</value>
+  </data>
+  <data name="FileData_Entity_ProcessType_Enum_UpdateOnly" xml:space="preserve">
+    <value>只处理更新 - 只更新指定仓库有该SKU的记录，不会创建任何新记录</value>
+  </data>
+  <data name="Delivery_Label_SellingOutNoTarget" xml:space="preserve">
+    <value>销售出库</value>
+  </data>
+  <data name="Delivery_Entity_Type_Enum_PurchaseIn" xml:space="preserve">
+    <value>购入</value>
+  </data>
+  <data name="Delivery_Entity_Type_Enum_SellingOut" xml:space="preserve">
+    <value>销出</value>
+  </data>
+  <data name="Delivery_Entity_Type_Enum_Transfer" xml:space="preserve">
+    <value>调拨</value>
+  </data>
+  <data name="Delivery_Label_PurchaseInNoSource" xml:space="preserve">
+    <value>购货入库</value>
+  </data>
+  <data name="Common_Button_Down" xml:space="preserve">
+    <value>下移</value>
+  </data>
+  <data name="Common_Button_Remove" xml:space="preserve">
+    <value>移除</value>
+  </data>
+  <data name="Common_Button_Up" xml:space="preserve">
+    <value>上移</value>
+  </data>
+  <data name="Common_Label_Add" xml:space="preserve">
+    <value>添加</value>
+  </data>
+  <data name="Common_Label_Danger" xml:space="preserve">
+    <value>错误</value>
+  </data>
+  <data name="Common_Label_Info" xml:space="preserve">
+    <value>提示</value>
+  </data>
+  <data name="Common_Label_No" xml:space="preserve">
+    <value>编号</value>
+  </data>
+  <data name="Common_Label_NotSelected" xml:space="preserve">
+    <value>未选择</value>
+  </data>
+  <data name="Common_Label_Remove" xml:space="preserve">
+    <value>移除</value>
+  </data>
+  <data name="Common_Label_Success" xml:space="preserve">
+    <value>成功</value>
+  </data>
+  <data name="Common_Label_Warning" xml:space="preserve">
+    <value>注意</value>
+  </data>
+  <data name="Excel_Label_Export" xml:space="preserve">
+    <value>导出</value>
+  </data>
+  <data name="Excel_Label_Import" xml:space="preserve">
+    <value>导入</value>
+  </data>
+  <data name="FileData_Entity_FileName" xml:space="preserve">
+    <value>文件名</value>
+  </data>
+  <data name="FileData_Entity_FileType" xml:space="preserve">
+    <value>文件类型</value>
+  </data>
+  <data name="FileData_Entity_MapRule" xml:space="preserve">
+    <value>匹配规则</value>
+  </data>
+  <data name="FileData_Entity_MapRuleDescription" xml:space="preserve">
+    <value>规则描述</value>
+  </data>
+  <data name="FileData_Entity_ProcessType" xml:space="preserve">
+    <value>处理类型</value>
+  </data>
+  <data name="FileData_Label_SelectMapRuleItem" xml:space="preserve">
+    <value>选中的规则项</value>
+  </data>
+  <data name="MapRuleItem_Entity_Column" xml:space="preserve">
+    <value>系统名</value>
+  </data>
+  <data name="MapRuleItem_Entity_DisplayName" xml:space="preserve">
+    <value>显示名</value>
+  </data>
+  <data name="MapRuleItem_Entity_Sorting" xml:space="preserve">
+    <value>排序</value>
+  </data>
+  <data name="Delivery_Label_NewInBoundDelivery" xml:space="preserve">
+    <value>新建购货入库单</value>
+  </data>
+  <data name="Common_Result_Info_CurrentVersionInfo" xml:space="preserve">
+    <value>系统版本信息</value>
+  </data>
+  <data name="Delivery_Result_Error_TargetCannotEqualSource" xml:space="preserve">
+    <value>目的仓不能与出货仓相同</value>
+  </data>
+  <data name="Delivery_Result_Success_CancelOutboundDeliverySuccess" xml:space="preserve">
+    <value>成功取消出库单</value>
+  </data>
+  <data name="Delivery_Result_Success_ConfirmOutboundDeliverySuccess" xml:space="preserve">
+    <value>成功确认出库单</value>
+  </data>
+  <data name="Delivery_Result_Success_DeleteInboundDeliverySuccess" xml:space="preserve">
+    <value>成功删除入库单</value>
+  </data>
+  <data name="Delivery_Result_Success_DeleteOutboundDeliverySuccess" xml:space="preserve">
+    <value>成功删除出库单</value>
+  </data>
+  <data name="Delivery_Result_Success_FinishInboundDeliverySuccess" xml:space="preserve">
+    <value>完成订单</value>
+  </data>
+  <data name="Delivery_Result_Success_ProcessOutboundDeliverySuccess" xml:space="preserve">
+    <value>成功处理出库单</value>
+  </data>
+  <data name="Delivery_Result_Success_ReceiveInboundDeliverySuccess" xml:space="preserve">
+    <value>成功收货入库</value>
+  </data>
+  <data name="Delivery_Result_Success_SubmitInboundDeliverySuccess" xml:space="preserve">
+    <value>成功提交出货单</value>
+  </data>
+  <data name="Delivery_Result_Success_SubmitOutboundDeliverySuccess" xml:space="preserve">
+    <value>成功提交入货单</value>
+  </data>
+  <data name="Inventory_Result_Error_ImportFileNameError" xml:space="preserve">
+    <value>文件名后缀不正确</value>
+  </data>
+  <data name="MapRule_Result_Error_SaveNameNotEmpty" xml:space="preserve">
+    <value>{0} 不能为空</value>
+  </data>
+  <data name="FileData_Result_Error_NotCSV" xml:space="preserve">
+    <value>该文件不是CSV文件</value>
+  </data>
+  <data name="FileData_Result_Error_NotXLS" xml:space="preserve">
+    <value>该文件不是XLS文件</value>
+  </data>
+  <data name="FileData_Result_Error_NotXLSX" xml:space="preserve">
+    <value>该文件不是XLSX文件</value>
+  </data>
+  <data name="Delivery_Label_Outbound_Select_New" xml:space="preserve">
+    <value>新建调拨出库单</value>
+  </data>
+  <data name="Delivery_Result_Error_SrcStore_Empty" xml:space="preserve">
+    <value>出货仓不能为空</value>
+  </data>
+  <data name="Common_Result_Error_VersionNotEqual" xml:space="preserve">
+    <value>对不起，操作失败，当前您正在操作的实体，界面的版本号与数据库版本号不相等，造成这个原因很有可能是其他同事在您提交之前修改过您正在修改的记录，故此，请先刷新一次页面，再进行业务操作。</value>
+  </data>
+  <data name="Delivery_Label_NewPurchaseInDelivery" xml:space="preserve">
+    <value>新建购货入库单</value>
+  </data>
+  <data name="FileInfo_Result_Success_PleaseDownload" xml:space="preserve">
+    <value>请下载</value>
+  </data>
+  <data name="Store_Label_All" xml:space="preserve">
+    <value>所有仓库</value>
+  </data>
+  <data name="Delivery_Button_Shipment" xml:space="preserve">
+    <value>货运处理</value>
+  </data>
+  <data name="Epacket_Button_ConfirmPackage" xml:space="preserve">
+    <value>确认包裹</value>
+  </data>
+  <data name="Epacket_Button_GetLabel" xml:space="preserve">
+    <value>获得打印贴标</value>
+  </data>
+  <data name="Epacket_Label_EpacketShipmentInformation" xml:space="preserve">
+    <value>Epacket 包裹货运信息</value>
+  </data>
+</root>

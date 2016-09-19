@@ -1,0 +1,52 @@
+﻿@{Employee currentEmployee = (Employee)@Session["CurrentEmployee"];}
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Warehouse and Logitics Modules</title>
+@Scripts.Render("~/Scripts/Common/modernizr")
+@Scripts.Render("~/Scripts/Common/jquery")
+
+@Scripts.Render("~/Scripts/Common/bootstrap")
+@Scripts.Render("~/Scripts/Common/tools")
+
+@Styles.Render("~/Styles/Common/bootstrap")
+
+<script>
+    // set the default lang
+    var defaultLang = "@LangHelper.GetThreadLang()";
+    // generate the javascript language resource!
+    @Html.Raw(LangHelper.GenerateJsResource());
+</script>
+
+
+<script>
+    // generate all enum javascript resources in entities.
+    @Html.Raw(BaseEntity.GenerateJsEnumResource());
+</script>
+
+<script>
+// 我们在这里定义一个全局的变量，放session employee
+var currentEmployee = {
+    ID:     "@currentEmployee.ID",
+    Name:   "@currentEmployee.Name",
+    ClientID: "@currentEmployee.ClientID"
+}
+
+
+//定义一个全局的变量 用于全局设置DataTable 多语言
+var dtLanguage = {
+    lengthMenu: Common_DataTable_Label_lengthMenu ,
+    zeroRecords:  Common_DataTable_Label_zeroRecords ,
+    info:  Common_DataTable_Label_info ,
+    infoEmpty: Common_DataTable_Label_infoEmpty ,
+    infoFiltered: Common_DataTable_Label_infoFiltered ,
+    paginate: {
+        first:  Common_DataTable_Label_paginate_first ,
+        last:  Common_DataTable_Label_paginate_last,
+        next:  Common_DataTable_Label_paginate_next ,
+        previous: Common_DataTable_Label_paginate_previous ,
+    }
+}
+</script>
+
+
+

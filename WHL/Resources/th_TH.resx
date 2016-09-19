@@ -1,0 +1,360 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Inventory_Label_SearchTools" xml:space="preserve">
+    <value>Search Tools</value>
+  </data>
+  <data name="Inventory_Label_Stores" xml:space="preserve">
+    <value>Stores</value>
+  </data>
+  <data name="Inventory_Entity_Avail" xml:space="preserve">
+    <value>Avail</value>
+  </data>
+  <data name="Inventory_Entity_diffSum" xml:space="preserve">
+    <value>DiffSum</value>
+  </data>
+  <data name="Inventory_Entity_InSum" xml:space="preserve">
+    <value>InSum</value>
+  </data>
+  <data name="Inventory_Entity_OnIn" xml:space="preserve">
+    <value>OnIn</value>
+  </data>
+  <data name="Inventory_Entity_OnOut" xml:space="preserve">
+    <value>OnOut</value>
+  </data>
+  <data name="Inventory_Entity_OutSum" xml:space="preserve">
+    <value>OutSum</value>
+  </data>
+  <data name="Inventory_Entity_ShipMiss" xml:space="preserve">
+    <value>ShipMiss</value>
+  </data>
+  <data name="Inventory_Entity_SwAvail" xml:space="preserve">
+    <value>SwAvail</value>
+  </data>
+  <data name="Product_Entity_Title" xml:space="preserve">
+    <value>Full Title</value>
+  </data>
+  <data name="Product_Entity_Price" xml:space="preserve">
+    <value>Price</value>
+  </data>
+  <data name="Product_Entity_ShortTitle" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="Product_Entity_SKU" xml:space="preserve">
+    <value>SKU</value>
+  </data>
+  <data name="Store_Entity_Description" xml:space="preserve">
+    <value>Description</value>
+  </data>
+  <data name="Store_Entity_Name" xml:space="preserve">
+    <value>Store</value>
+  </data>
+  <data name="Store_Entity_Type" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="Base_Entity_ID" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="Base_Entity_UpdateDateLayout" xml:space="preserve">
+    <value>UpdateAt</value>
+  </data>
+  <data name="Store_Entity_Type_Enum_SmartWarehouse" xml:space="preserve">
+    <value>Smart Warehouse</value>
+  </data>
+  <data name="Store_Entity_Type_Enum_SolidStore" xml:space="preserve">
+    <value>Solid Store</value>
+  </data>
+  <data name="Common_Button_Search" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="Inventory_Label_Inventories" xml:space="preserve">
+    <value>Inventories</value>
+  </data>
+  <data name="Common_DataTable_Label_info" xml:space="preserve">
+    <value>Showing _START_ to _END_ of _TOTAL_ entries</value>
+  </data>
+  <data name="Common_DataTable_Label_infoEmpty" xml:space="preserve">
+    <value>Showing 0 to 0 of 0 entries</value>
+  </data>
+  <data name="Common_DataTable_Label_infoFiltered" xml:space="preserve">
+    <value>(filtered from _MAX_ total entries)</value>
+  </data>
+  <data name="Common_DataTable_Label_lengthMenu" xml:space="preserve">
+    <value>Show _MENU_ entries</value>
+  </data>
+  <data name="Common_DataTable_Label_paginate_first" xml:space="preserve">
+    <value>First</value>
+  </data>
+  <data name="Common_DataTable_Label_paginate_last" xml:space="preserve">
+    <value>Last</value>
+  </data>
+  <data name="Common_DataTable_Label_paginate_next" xml:space="preserve">
+    <value>Next</value>
+  </data>
+  <data name="Common_DataTable_Label_paginate_previous" xml:space="preserve">
+    <value>Previous</value>
+  </data>
+  <data name="Common_DataTable_Label_zeroRecords" xml:space="preserve">
+    <value>No matching records found</value>
+  </data>
+  <data name="Common_Button_Reset" xml:space="preserve">
+    <value>Reset</value>
+  </data>
+  <data name="Inventory_Entity_OnHold" xml:space="preserve">
+    <value>OnHold</value>
+  </data>
+  <data name="Common_Label_All" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="Delivery_Button_Inbound" xml:space="preserve">
+    <value>Inbound</value>
+  </data>
+  <data name="Delivery_Button_Outbound" xml:space="preserve">
+    <value>Outbound</value>
+  </data>
+  <data name="Excel_Button_Export" xml:space="preserve">
+    <value>Export</value>
+  </data>
+  <data name="Excel_Button_Import" xml:space="preserve">
+    <value>Import</value>
+  </data>
+  <data name="Common_Button_Add" xml:space="preserve">
+    <value>Add</value>
+  </data>
+  <data name="Common_Button_Close" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="Common_Button_Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="Common_Button_Submit" xml:space="preserve">
+    <value>Submit</value>
+  </data>
+  <data name="Common_Button_ShowPostData" xml:space="preserve">
+    <value>ShowPostData</value>
+  </data>
+  <data name="Delivery_Button_Process" xml:space="preserve">
+    <value>Process</value>
+  </data>
+  <data name="Delivery_Label_Carriers" xml:space="preserve">
+    <value>Carriers</value>
+  </data>
+  <data name="Delivery_Label_DON" xml:space="preserve">
+    <value>Don</value>
+  </data>
+  <data name="Delivery_Label_FromStore" xml:space="preserve">
+    <value>FromStore</value>
+  </data>
+  <data name="Delivery_Label_OutQty" xml:space="preserve">
+    <value>OutQty</value>
+  </data>
+  <data name="Delivery_Label_Product" xml:space="preserve">
+    <value>Product</value>
+  </data>
+  <data name="Delivery_Label_SKU" xml:space="preserve">
+    <value>SKU</value>
+  </data>
+  <data name="Delivery_Label_ToStore" xml:space="preserve">
+    <value>ToStore</value>
+  </data>
+  <data name="Common_Button_Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="Delivery_Button_Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Delivery_Button_Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="Delivery_Button_Ship" xml:space="preserve">
+    <value>Ship</value>
+  </data>
+  <data name="Delivery_Label_CancelOutboundDeliverySuccess" xml:space="preserve">
+    <value>Cancel Outbound Delivery Success</value>
+  </data>
+  <data name="Delivery_Label_ConfirmOutboundDeliverySuccess" xml:space="preserve">
+    <value>Confirm Outbound Delivery Success</value>
+  </data>
+  <data name="Delivery_Label_DeleteOutboundDeliverySuccess" xml:space="preserve">
+    <value>Delete Outbound Delivery Success</value>
+  </data>
+  <data name="Delivery_Label_NewDelivery" xml:space="preserve">
+    <value>NewDelivery</value>
+  </data>
+  <data name="Delivery_Label_ProcessOutboundDeliverySuccess" xml:space="preserve">
+    <value>Process Outbound Delivery Success</value>
+  </data>
+  <data name="Delivery_Label_SubmitOutboundDeliverySuccess" xml:space="preserve">
+    <value>Submit Outbound Delivery Success</value>
+  </data>
+  <data name="Delivery_Label_OutboundDelivery" xml:space="preserve">
+    <value>OutboundDelivery</value>
+  </data>
+  <data name="Delivery_Label_StatusBadOrder" xml:space="preserve">
+    <value>badOrder</value>
+  </data>
+  <data name="Delivery_Label_StatusCancel" xml:space="preserve">
+    <value>cancel</value>
+  </data>
+  <data name="Delivery_Label_StatusDelivering" xml:space="preserve">
+    <value>delivering</value>
+  </data>
+  <data name="Delivery_Label_StatusError" xml:space="preserve">
+    <value>error</value>
+  </data>
+  <data name="Delivery_Label_StatusNew" xml:space="preserve">
+    <value>new</value>
+  </data>
+  <data name="Delivery_Label_StatusProcessing" xml:space="preserve">
+    <value>processing</value>
+  </data>
+  <data name="Delivery_Label_StatusReceived" xml:space="preserve">
+    <value>received</value>
+  </data>
+  <data name="Delivery_Label_StatusSubmited" xml:space="preserve">
+    <value>submited</value>
+  </data>
+  <data name="Delivery_Label_StatusSuccess" xml:space="preserve">
+    <value>success</value>
+  </data>
+  <data name="Menu_Label_Delivery" xml:space="preserve">
+    <value>Delivery</value>
+  </data>
+  <data name="Menu_Label_Employee" xml:space="preserve">
+    <value>Current User</value>
+  </data>
+  <data name="Menu_Label_Home" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="Menu_Label_Inventory" xml:space="preserve">
+    <value>Inventory</value>
+  </data>
+  <data name="Menu_Label_Log" xml:space="preserve">
+    <value>History Log</value>
+  </data>
+  <data name="Menu_Label_MapRule" xml:space="preserve">
+    <value>Mapping Rule</value>
+  </data>
+  <data name="Menu_Label_Setting" xml:space="preserve">
+    <value>Setting</value>
+  </data>
+  <data name="Menu_Label_Store" xml:space="preserve">
+    <value>Stores </value>
+  </data>
+</root>

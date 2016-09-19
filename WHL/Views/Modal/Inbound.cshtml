@@ -1,0 +1,94 @@
+﻿<!-- 入货模态框（InBound Modal） -->
+<div class="modal fade" id="inboundModal" tabindex="-1" role="dialog" aria-labelledby="inModalLabel" aria-hidden="true">
+    <div class="modal-dialog" style="width:1200px;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="ibModalLabel">
+                    @LangHelper.Get("Delivery_Label_InboundDelivery")&nbsp;<span id="ibTarStoreNameSpan">@LangHelper.Get("Store_Label_All")</span>
+                </h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal" id="ibForm">
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">@LangHelper.Get("Delivery_Label_DON")</label>
+                        <div class="col-sm-4" id="ibDeliverySelectDiv">
+                            <select id="ibDeliverySelect" name="ID" class="form-control"></select>
+                        </div>
+
+                        <label class="col-sm-2 control-label" id="ibCarrierSelectLabel">@LangHelper.Get("Delivery_Label_Carriers")</label>
+                        <div class="col-sm-4" id="ibCarrierSelectDiv">
+                            <select id="ibCarrierSelect" class="form-control"></select>
+                        </div>
+                    </div>
+                 
+                    <div class="form-group"  >
+                        <label class="col-sm-2 control-label" id="SrcStoreLabel">@LangHelper.Get("Delivery_Label_FromStore")</label>
+                        <div class="col-sm-4" id="SrcStoreDiv">
+                            <select id="ibSrcStoreSelect"  class="form-control"></select>
+                        </div>
+
+                        <label class="col-sm-2 control-label">@LangHelper.Get("Delivery_Label_ToStore")</label>
+                        <div class="col-sm-4">
+                            <select id="ibTarStoreSelect"  class="form-control"></select>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div align="right">
+                            <button type="button" id="ibAddItemBtn" class="btn btn-info" onclick="ibAddItems()">@LangHelper.Get("Common_Button_Add")</button>
+                            <button type="button" id="ibDeleteItemBtn" class="btn btn-danger" onclick="ibDeleteItems()">@LangHelper.Get("Common_Button_Delete")</button>
+                        </div>
+                        <table class="table table-striped" id="ibTable">
+                            <thead >
+                                <tr>
+                                    <th style="width:10%;padding-left:10px!important"><input name="select_all" value="1" id="ibTableSelectAllBox" type="checkbox"></th>
+                                    <th style="width:25%;">
+                                        @LangHelper.Get("Delivery_Label_SKU")
+                                    </th>
+                                    <th style="width:25%;">
+                                        @LangHelper.Get("Delivery_Label_Product")
+                                    </th>
+                                    <th style="width:20%;">
+                                        @LangHelper.Get("Delivery_Label_InQty")
+                                    </th>
+                                    <th style="width:20%;">
+                                        @LangHelper.Get("Delivery_Label_OutQty")
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                    <div style="display:none;">
+                        <input id="ibDeliveryType" name="DeliveryType" />
+                        <input id="ibVersion" name="Version" />
+                        <input id="ibCarrierID" name="CarrierID" />
+                        <input id="ibSrcStoreID" name="SrcStoreID" />
+                        <input id="ibTarStoreID" name="TarStoreID" />
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" id="ibCloseBtn" onclick="ibModalClose();">
+                    @LangHelper.Get("Common_Button_Close")
+                </button>
+ 
+                <button type="button" class="btn btn-success" id="ibSubmitDeliveryBtn" onclick="ibSubmitDelivery();">
+                    @LangHelper.Get("Common_Button_Save")
+                </button>
+
+                <button type="button" class="btn btn-danger" id="ibDeleteDeliveryBtn" onclick="ibDeleteDelivery();" style="display:none">
+                    @LangHelper.Get("Delivery_Button_Delete")
+                </button>
+
+                <button type="button" class="btn btn-primary" id="ibReceiveDeliveryBtn" onclick="ibReceiveDelivery();" style="display:none">
+                    @LangHelper.Get("Delivery_Button_Receive") 
+                </button>
+
+                <button type="button" class="btn btn-primary" id="ibFinishDeliveryBtn" onclick="ibFinishDelivery();" style="display:none">
+                    @LangHelper.Get("Delivery_Button_Finish")
+                </button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

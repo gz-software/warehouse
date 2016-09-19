@@ -1,0 +1,82 @@
+﻿<!-- EXCEL导入数据（Import  Modal） -->
+
+<div class="modal fade" id="importModal" tabindex="-1" role="dialog" aria-labelledby="outModalLabel" aria-hidden="true">
+    <div class="modal-dialog" style="width:1200px;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="ipModalLabel">
+                    @LangHelper.Get("Excel_Label_Import"):  &nbsp;<span id="ipEffNameSpan">@LangHelper.Get("Common_Label_NotSelected")</span>
+
+                </h4>
+            </div>
+
+            <div class="modal-body">
+                <form id="ipForm" action="" enctype="multipart/form-data" class="container">
+
+                    <input type="hidden" name="eff" id="ipEffInput" value="0" />
+                    <input type="hidden" name="submitFileData.AssType" id="ipAssTypeInput" value="0" />
+                    <input type="hidden" name="submitFileData.DataType" id="ipDataTypeInput" value="0" />
+
+                    <div class="form-group" style="height:50px;">
+                        <label class="col-sm-2 control-label">@LangHelper.Get("FileData_Entity_MapRule")</label>
+                        <div class="col-sm-4">
+                            <select id="ipMapRuleSelect" name="submitFileData.MapRuleID" class="form-control"></select>
+                        </div>
+
+
+                        <label class="col-sm-2 control-label">@LangHelper.Get("FileData_Entity_MapRuleDescription")</label>
+                        <div class="col-sm-4" id="ipMapRuleDescDiv">&nbsp;</div>
+
+                    </div>
+
+                    <div class="form-group" style="height:50px;">
+                        <label class="col-sm-2 control-label">@LangHelper.Get("FileData_Entity_ProcessType")</label>
+                        <div class="col-sm-10">
+                            <select id="ipProcessTypeSelect" name="submitFileData.ProcessType" class="form-control" style="max-width:1000px!important;" >
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">@LangHelper.Get("Excel_Label_UploadFile")</label>
+                        <div class="col-sm-4 input-group">
+                            <input id="ipFileInput" type="file" name="submitFileData.UploadFile" style="display:none" />
+                            <input id="ipFileCoverInput" class="form-control" type="text" style="width:150px;" />
+                            <a id="ipBrowseBtn" class="btn btn-default">@LangHelper.Get("Common_Button_Browse")</a>
+                        </div>
+
+                        <label class="col-sm-2 control-label">@LangHelper.Get("FileData_Entity_FileType")</label>
+                        <div class="col-sm-4">
+                            <select id="ipFileTypeSelect" name="submitFileData.FileType" class="form-control">
+                            </select>
+                        </div>
+                    </div>
+
+                    <div style="height:80px">&nbsp;</div>
+
+                  
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">@LangHelper.Get("FileData_Label_SelectMapRuleItem")</label>
+                        <div class="col-sm-10" style="overflow-y: hidden; overflow-x: auto;  border: 1px solid #e5e5e5;">
+                            <div id="ipMapRuleOptionListDiv" style=" float: left; width: 40%; overflow-y: auto; height: 200px; background-color:#e5e5e5">
+                            </div>
+                            <div style="width:2%;float:left;">
+                                &nbsp;
+                            </div>
+                            <div id="ipMapRuleItemListDiv" style=" float: left; width: 58%; overflow-y: auto; height: 200px; ">
+                            </div>
+                        </div>
+                    </div>
+
+
+</form>
+            </div><!-- /.modal-body -->
+
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success" id="ipUploadBtn"  onclick="ipSubmit()">@LangHelper.Get("Common_Button_Import")</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal" id="ipCloseBtn">@LangHelper.Get("Common_Button_Close")</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

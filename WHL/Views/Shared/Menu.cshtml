@@ -1,0 +1,39 @@
+﻿@{Employee currentEmployee = (Employee)@Session["CurrentEmployee"];}
+@Scripts.Render("~/Scripts/WHL/menu")
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-header" style="width:30%!important;">
+        @Html.ActionLink("IChannel Warehouse and Logistics", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+
+    </div>
+    <div style="width: 60% !important; float: right; vertical-align: middle; " align="right">
+        <ul class="nav navbar-nav" style="float:right!important;">
+            <li>@Html.ActionLink(@LangHelper.Get("Menu_Label_Home"), "Index", "Home")</li>
+            <li>@Html.ActionLink(@LangHelper.Get("Menu_Label_Inventory"), "Index", "Inventory")</li>
+            <li>@Html.ActionLink(@LangHelper.Get("Menu_Label_Delivery"), "Index", "Delivery")</li>
+            <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                    @LangHelper.Get("Menu_Label_Setting")<b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                    <li>@Html.ActionLink(@LangHelper.Get("Menu_Label_Store"), "Index", "Store")</li>
+                    <li>@Html.ActionLink(@LangHelper.Get("Menu_Label_MapRule"), "Index", "MapRule")</li>
+                </ul>
+            </li>  
+
+            <li>@Html.ActionLink(@LangHelper.Get("Menu_Label_Log"), "Index", "Log")</li>
+            <li>@Html.ActionLink(@LangHelper.Get("Menu_Label_Employee")+ ":  " + currentEmployee.Name, "Index", "Home")</li>
+            <li>&nbsp;</li>
+            <li style="padding-top:15px;padding-bottom:15px;">
+                <select id="langSelect" onchange="switchLang(this.value)">
+                    <option value="zh_CN">简体中文</option>
+                    <option value="zh_HK">繁体中文</option>
+                    <option value="en_US">English</option>
+                    <option value="th_TH">ภาษาไทย</option>
+                </select>
+            </li>
+            <li>&nbsp;</li>
+        </ul>
+    </div>
+
+
+</div>

@@ -1,0 +1,47 @@
+﻿@Scripts.Render("~/Scripts/Common/laydate")
+@Styles.Render("~/Styles/Common/laydate")
+
+<!--Query Form-->
+<form id="invQueryForm">
+    <!--Inventory Stores Panel-->
+    <div class="panel panel-success" >
+        <div class="panel-heading text-success"><div align="left"><b>@LangHelper.Get("Inventory_Label_Stores")</b></div></div>
+        <div class="panel-body">
+            <div id="invQueryStoreDiv" style="min-height:120px;"></div>
+            <input type="hidden" class="form-control" name="StoreID" id="invStoreID"/>
+        </div>
+    </div>
+
+
+    <!--Iventory Query Panel-->
+    <div class="panel panel-success">
+        <div class="panel-heading text-success"><div align="left"><b>@LangHelper.Get("Inventory_Label_SearchTools")</b></div></div>
+        <div class="panel-body">
+            <div class="form-group">
+                <label class="text-success">@LangHelper.Get("Product_Entity_ShortTitle")</label>
+                <input type="text" class="form-control" name="Product.shortTitle" placeholder="Iphone">
+            </div>
+            <div class="form-group">
+                <label class="text-success">@LangHelper.Get("Product_Entity_SKU")</label>
+                <input type="text" class="form-control" name="Product.SKU" placeholder="A001">
+            </div>
+            <div class="form-group">
+                <label class="text-success">@LangHelper.Get("Inventory_Entity_Avail")</label>
+                <div style="width:100%">
+                    <div style="float:left;width:45%;"><input type="text" class="form-control " name="QueryAvail1" placeholder="0" style=""></div>
+                    <div style="float:left;width:8%;">&nbsp;&nbsp;&nbsp;</div>
+                    <div style="float:left;width:45%;"><input type="text" class="form-control" name="QueryAvail2" placeholder="0" style=""></div>
+                    <div style="clear:both"></div> 
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="text-success">@LangHelper.Get("Base_Entity_UpdateDateLayout")</label>
+                <input type="text" class="form-control" name="QUeryUpdateDate1" id="QueryUpdateTime1" placeholder="2016-01-01" onclick="laydate()">
+                <br/>
+                <input type="text" class="form-control" name="QUeryUpdateDate2" id="QueryUpdateTime2" placeholder="2016-12-31" onclick="laydate()">
+            </div>
+            <input type="button" onclick="invSearch()" class="btn btn-success" value="@LangHelper.Get("Common_Button_Search")" />
+            <input type="button" onclick="invReset()" class="btn btn-toolbar" value="@LangHelper.Get("Common_Button_Reset")" />
+        </div>
+    </div>
+</form>

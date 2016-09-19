@@ -1,0 +1,29 @@
+﻿@Scripts.Render("~/Scripts/Common/jqueryTable")
+@Styles.Render("~/Styles/Common/jqueryTable")
+@Scripts.Render("~/Scripts/WHL/inventory")
+@Scripts.Render("~/Scripts/WHL/outbound")
+@Scripts.Render("~/Scripts/WHL/inbound")
+@Scripts.Render("~/Scripts/WHL/import")
+@Scripts.Render("~/Scripts/WHL/export")
+@Scripts.Render("~/Scripts/WHL/epacket")
+
+<!--we put index content here-->
+<div style="min-height:100%"  align="left">
+    <ul style="list-style: none; text-align: left; margin: 5px; padding: 5px; " >
+        <li style="float:left;width:15%;" >
+           @{Html.RenderAction("Query");}
+        </li>
+        <li style="float: left; width: 85%">
+           @{Html.RenderAction("List");}
+        </li>
+    </ul>
+</div>
+
+<!--we put all hidden popup modals here!-->
+<div  id="modals">
+    @{Html.RenderAction("Outbound","Modal");}
+    @{Html.RenderAction("Inbound", "Modal");}
+    @{Html.RenderAction("Import", "Modal");}
+    @{Html.RenderAction("Export", "Modal");}
+    @{Html.RenderAction("Epacket", "Modal");}
+</div>

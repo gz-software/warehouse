@@ -1,0 +1,479 @@
+﻿
+
+
+<ul id="myTab" class="nav nav-tabs">
+    <li class="active">
+        <a href="#intro" data-toggle="tab">
+            Project Info
+        </a>
+    </li>
+    <li>
+        <a href="#log" data-toggle="tab">
+            Version Update History
+        </a>
+    </li>
+    <li>
+        <a href="#tech" data-toggle="tab">
+            Technical Reference
+        </a>
+    </li>
+</ul>
+
+<div id="myTabContent" class="tab-content">
+    <div class="tab-pane fade in active" id="intro">
+        <br>
+        <div class="container">
+
+            <div class="jumbotron">
+                <h1>Warehouse and Logistics</h1>
+                <h5>
+                    IChannel Warehouse and Logistics is an application that
+                    demonstrates how Warehouse modules and Logsitics modules are working.
+                </h5>
+            </div>
+            <div style="width:100%">
+                Warehouse and Logistic 作为用户管理仓储与物流的两个核心模块（后文统称简写为WHL模块），在整个系统扮演重要角色，它作为系统一个功能点，既让最终用户通过UI直接使用，查看与管理存货（Inventory）, 又可以开放一批被动调用的接口，让其他模块发生命令进来(Command Call)，又或者是进行数据与状态查询（Status Query），同时，各类命令也支持导入（Import）方式，以及各种数据状态查询也支持导出（Export）方式，这些方式可以通过MAPPING让用户设置。整个系统界面层需要有多语言支持，一期支持简体中文，繁体中文，英文。
+                <br><br>
+                仓管模块对接着内部物流模块（Logistic），进行货品的入货，发货与转货等日常操作，以及对应的物流服务商(Shipping carriers)的一系列接口，进行下单，查询与跟踪等行为，并把这种行为结果与状态，实时反馈到本模块及其外部模块，而对于传统的物流服务商，我们定义为货运商（Shipping）, 它们只负责传统的物流运送，另一种是fulfillment , 其原理与Amazon FBA相当相近，相当于国内的“智能代发货仓”，它既提供仓储又提供物流的功能，同时对接inventory与传统shipping. 在这种情况下，客户的仓库也分为 传统实体仓(Solid Store)  和  智能仓 (Smart warehouse)
+
+            </div>
+        </div>
+    </div>
+
+    <div class="tab-pane fade" id="log">
+        <br>
+        <div class="container">
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Version</th>
+                        <th>Module</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>V0916</td>
+                        <td>
+                            Delivery <br> Shipping <br> Interface
+                        </td>
+                        <td>
+                            1.Delivery Enhancement: adjuest and fixing the inventory numberic data which effect by inventory. including: in/out deifference handling, avail and holding alarm,OnIn/OnOut balancing.<br>
+                            2.Interface: Shipping: Epacket:  Check Rate, Add Package (Completed)<br>
+                            3.Interface: Document: Initial Document writing. (Completed)<br>
+                            <font style="color:green">
+                                4.Weekly Release(0916)
+                            </font>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>V0914</td>
+                        <td>
+                            Delivery <br> Shipping <br> Interface
+                        </td>
+                        <td>
+                            1.Delivery Enhancement: adjuest and fixing the inventory numberic data which effect by inventory. including: in/out deifference handling, avail and holding alarm,OnIn/OnOut balancing.<br>
+                            2.Delivery Enhancement: adjuest and fixing the UI layout elements show/hide with correct delivery type and delivery status.(Completed)<br>
+                            3.Shipping: Epacket: CheckRate: shipment check rate interface based on the epacket api codeing(Completed)<br>
+                            4.Shipping: Epacket: AddPackage: shipment add package interface based on the epacket api codeing(Completed)<br>
+                            5.Interface: Common: Inventory Query.(Completed)<br>
+                            6.Interface: Document: Initial Document writing.<br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>V0913</td>
+                        <td>
+                            Delivery <br> Shipping <br> Interface
+                        </td>
+                        <td>
+                            1.Delivery Enhancement: adjuest and fixing the inventory numberic data which effect by inventory. including: in/out deifference handling, avail and holding alarm,OnIn/OnOut balancing.<br>
+                            2.Delivery Enhancement: adjuest and fixing the UI layout elements show/hide with correct delivery type and delivery status.<br>
+                            3.Shipping: Epacket: CheckRate: shipment check rate interface based on the epacket api codeing<br>
+                            4.Shipping: Epacket: AddPackage: shipment add package interface based on the epacket api codeing<br>
+                            5.Interface: Common: Stores Query.(Completed)<br>
+                            6.Interface: Common: Carriers Query.(Completed)<br>
+                            7.Interface: Common: Inventory Query.<br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>V0912</td>
+                        <td>
+                            Delivery <br> Shipping
+                        </td>
+                        <td>
+                            1.Delivery Enhancement: adjuest and fixing the inventory numberic data which effect by inventory. including: in/out deifference handling, avail and holding alarm,OnIn/OnOut balancing.<br>
+                            2.Delivery Enhancement: adjuest and fixing the UI layout elements show/hide with correct delivery type and delivery status.<br>
+                            3.Shipping: Epacket: CheckRate: shipment check rate interface based on the epacket api codeing<br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>V0909</td>
+                        <td>
+                            Delivery <br> Shipping
+                        </td>
+                        <td>
+                            1.Delivery Enhancement: adjuest and fixing the inventory numberic data which effect by inventory. including: in/out deifference handling, avail and holding alarm,OnIn/OnOut balancing.<br>
+                            2.Delivery Enhancement: Adding [version] control to prevent multi employee touch the same delivery.(Completed)<br>
+                            3.Delivery Enhancement: adjuest and fixing the UI layout elements show/hide with correct delivery type and delivery status.<br>
+                            4.Shipping: Constructing shipping structure<br>
+                            <font color="red">
+                                5.Shipping: Waiting Leo provide Epacket calling function sample and related source and dcouments (Hold)<br>
+                            </font>
+                            <font style="color:green">
+                                6. Weekly release(0909)
+                            </font>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>V0908</td>
+                        <td>
+                            Delivery <br> Shipping
+                        </td>
+                        <td>
+                            1.Delivery Enhancement: adjuest and fixing the inventory numberic data which effect by inventory. including: in/out deifference handling, avail and holding alarm,OnIn/OnOut balancing.<br>
+                            2.Delivery Enhancement: existed delivery(DON) filtering by tar Store, src Store, DeliveryType(Completed).<br>
+                            3.Delivery Enhancement: Adding [version] control to prevent multi employee touch the same delivery.<br>
+                            4.Shipping: Constructing shipping structure<br>
+                            <font color="red">
+                                5.Shipping: Waiting Leo provide Epacket calling function sample and related source and dcouments (Hold)
+                            </font>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>V0907</td>
+                        <td>
+                            Delivery <br> Inventory <br>  DeliveryLog <br> Shipping
+                        </td>
+                        <td>
+                            1.Delivery Enhancement: adjuest and fixing the inventory numberic data which effect by inventory. including: in/out deifference handling, avail and holding alarm,OnIn/OnOut balancing.<br>
+                            2.Delivery Enhancement: existed delivery(DON) filtering by tar Store, src Store, DeliveryType.
+                            3.DeliveryLog: impletement the delivery log (Completed)<br>
+                            4.Shipping: Constructing shipping structure<br>
+                            <font color="red">
+                                5.Shipping: Waiting Leo provide Epacket calling function sample and related source and dcouments (Hold)
+                            </font>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>V0906</td>
+                        <td>
+                            Framework <br>  DeliveryLog <br> Shipping
+                        </td>
+                        <td>
+                            1.Delivery Type: improve the structure and divided transfer/sellingOut/purchaseIn (Completed)<br>
+                            2.Framework: toaster, update the UI feedback user info and defined the message layout (Completed)<br>
+                            3.Framework: Lock each submit button to prevent double submit behaivours (Completed)<br>
+                            4.DeliveryLog: impletement the delivery log<br>
+                            5.Shipping: Constructing shipping structure<br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>V0905</td>
+                        <td>
+                            Delivery <br> Framework <br>  DeliveryLog<br> Export and Import
+                        </td>
+                        <td>
+                            1.Delivery Type: improve the structure and divided transfer/sellingOut/purchaseIn<br>
+                            2.Framework: redefined all message info which feedback to user(success,error,info,warning)<br>
+                            3.DeliveryLog: impletement the delivery log<br>
+                            <font color="red">
+                                4.Import and Export: the export and import refactoring. (Requirement Changed and Refactoring)
+                            </font>
+                        </td>
+                    </tr>
+                    <tr style="color:red">
+                        <td>V0903</td>
+                        <td>
+                            Requirement Changed And Refactoring Structure By Leo's Mail: 《答复: [ichannel] .[WHL_Req_Collect4] API_Epacket1_Pa0826》
+                        </td>
+                        <td>
+                            1.Import and Export Refactoring: Add Excel 2007 and Csv file supporting.<br>
+                            2.Import and Export Refactoring: Update new UI for new export and import function.<br>
+                        </td>
+                    </tr>
+                    <tr style="color:red">
+                        <td>V0902</td>
+                        <td>
+                            Requirement Changed And Refactoring Structure By Leo's Mail: 《答复: [ichannel] .[WHL_Req_Collect4] API_Epacket1_Pa0826》
+                        </td>
+                        <td>
+                            1.Import and Export Structure changed: need to adapt other modules export and import design<br>
+                            2.Import and Export Refactoring: Add File Type , Process Type selection and export file name user-defined.<br>
+                            3.Import and Export Refactoring: Add export and import mapping rule option selection before upload.<br>
+                        </td>
+                    </tr>
+                    <tr style="color:red">
+                        <td>V0901</td>
+                        <td>
+                            Requirement Changed And Refactoring Structure By Leo's Mail: 《答复: [ichannel] .[WHL_Req_Collect4] API_Epacket1_Pa0826》
+                        </td>
+                        <td>
+                            1.Import and Export Structure changed: need to adapt other modules export and import design<br>
+                            2.Epacket API changed: 《epacket_specification_V1.1-new.pdf》 to 《apacuserguideapi4.0.pdf》<br>
+                            3.Import and Export Refactoring: Add File Info Entity/Add MapRuleOption Entity
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>V0831</td>
+                        <td>Delivery <br> Framework</td>
+                        <td>
+                            1.Delivery Transfer Inbound Coding: Completed<br>
+                            2.Delivery Transfer Outbound Improvment: UnitTest/Debug/Enhancement<br>
+                            3.Export Improvment: UnitTest/Debug/Enhancement<br>
+                            4.Import Improvment: UnitTest/Debug/Enhancement<br>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>V0830</td>
+                        <td>Delivery <br> Framework</td>
+                        <td>
+                            1.Delivery Transfer Inbound Coding: Exception and error message handing.<br>
+                            2.Delivery Transfer Outbound Improvment: UnitTest/Debug/Enhancement<br>
+                            3.Framework Improvment: All stauts enum variable generate  in jscript
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>V0826</td>
+                        <td>Delivery <br> Framework</td>
+                        <td>
+                            1.Delivery Transfer Inbound Coding: Exception and error message handing.<br>
+                            2.Delivery Transfer Outbound Improvment: UnitTest/Debug/Enhancement<br>
+                            3.Framework Improvment: All Language Resource generate variable in jscript
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>V0825</td>
+                        <td>Delivery</td>
+                        <td>
+                            1.Delivery Transfer Inbound Coding: Inbound Process and data effect with inventory.<br>
+                            2.Delivery Transfer Outbound Improvment: UnitTest/Debug/Enhancement<br>
+                            3.Weekly Release 0825
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>V0824</td>
+                        <td>Delivery <br> Release </td>
+                        <td>
+                            1.Delivery Transfer Inbound Coding: Inbound Process and data effect with inventory.<br>
+                            <font style="color:green">2.Weekly replase: tidied file/comments/code.<br></font>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>V0823</td>
+                        <td>Delivery <br> 3rd API</td>
+                        <td>
+                            1.Delivery Transfer Inbound Coding: Inbound Process and data effect with inventory.<br>
+                            2.Research of E邮宝 interfaces<br>
+                            3.Delivery SellOut Outbound Coding: Ship target info. <br>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>V0822</td>
+                        <td>Delivery <br> Framework</td>
+                        <td>
+                            1.Delivery Transfer Inbound Coding: Inbound Process<br>
+                            2.MultiLang: Add Support 繁体中文 and ภาษาไทย<br>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>V0821</td>
+                        <td>Delivery</td>
+                        <td>
+                            1.Delivery Transfer Outbound Coding: Completed<br>
+                            2.Delivery Transfer Inbound Coding: Inbound Form/Inbound delivery creatation.<br>
+                            3.Initial test inbound data prepare.<br>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>V0820</td>
+                        <td>Inventory <br> Delivery <br> Export/Import <br> Framework <br> Requirement Changed And Refactoring Structure By Leo's Replied 《答复: [ichannel].[WHL] weekly report Pa0815》 </td>
+                        <td>
+                            1.Delivery Transfer Outbound Coding: Process Flow Exception Handing.<br>
+                            2.Inventory Layout improvement and optimization<br>
+                            3.Import: DataType Convertion and Inventory import Done<br>
+                            <font color="red">
+                                4.Refactor data Structure: Change the user/store/delivery and add client entity. change the User Entity to Employee entity.(Requirement Changed and Refactoring)
+                            </font>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>V0819</td>
+                        <td>Delivery <br> Export/Import</td>
+                        <td>
+                            1.Delivery Transfer Outbound Coding: Existed delivery handing.<br>
+                            2.Delivery Transfer Outbound Coding: Process flow and related inventory data change<br>
+                            3.Interface between inventory and Modals.<br>
+                            4.Import : Process and Mapping Rule Effect coding.<br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>V0818</td>
+                        <td>Delivery <br> Export/Import</td>
+                        <td>
+                            1.Delivery Transfer Outbound Coding: Outbound Form and New Delivery Creatation.<br>
+                            2.Import Form coding<br>
+                            3.NPOI Excel Data Import core coding<br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>V0817</td>
+                        <td>Delivery <br> Framework </td>
+                        <td>
+                            1.Delivery Intial Data Preparation<br>
+                            2.Delivery Service and Controller Coding<br>
+                            3.Popup Modal and Toaser Coding <br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>V0816</td>
+                        <td>Inventory <br> Export/Import <br> Release</td>
+                        <td>
+                            1.Inventory Query Completed<br>
+                            2.Export enhancement completed.<br>
+                            <font style="color:green">3.Weekly Relased.</font><br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>V0815</td>
+                        <td>Inventory<br> Export/Import</td>
+                        <td>
+                            1.Inventory Query initial code.<br>
+                            2.Export enhancement.<br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>V0813</td>
+                        <td>Inventory <br> Export/Import</td>
+                        <td>
+                            1.Inventory list layout via jquery.datatable<br>
+                            2.Excel Helper Core.<br>
+                            3.Export inventory data via mapping rule define.<br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>V0812</td>
+                        <td>Inventory<br>Framework</td>
+                        <td>
+                            1.Implement inventory basic service <br>
+                            2.Implement inventory controller  <br>
+                            3.Implement inventory view <br>
+                            4.Multi Language Support: English and 简体中文
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>V0811</td>
+                        <td>Framework<br />Data</td>
+                        <td>
+                            1.Add Data Configuration and Data Context for Data Access Layer.<br>
+                            2.Add and demostrates intial simulated biz data.<br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>V0810</td>
+                        <td>Framework</td>
+                        <td>
+                            1.Adjest the code file structure<br>
+                            2.Release initial version to client TFS.<br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>V0809</td>
+                        <td>Framework</td>
+                        <td>
+                            1.Construct data structure via code first.<br>
+                            2.Construct data entities.
+                            3.Defined the Mapping of entities.<br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>V0808</td>
+                        <td>Framework <br> Relase</td>
+                        <td>
+                            <font style="color:green">
+                                1.Intial Version.Set up the project framework.
+                            </font><br>
+                            2.Defined MVC Layers.<br>
+                            3.Add Logger<br>
+
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+
+
+        </div>
+    </div>
+
+
+
+    <div class="tab-pane fade" id="tech">
+        <br>
+        <div class="container">
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Tech Point</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tr>
+                    <td><a href="https://msdn.microsoft.com/en-us/data/ef.aspx" target="_blank">Microsoft Entity Framework</a></td>
+                    <td>
+                        Version: 6.0. The WHL are implement by Microsoft Entity Framework MVC structure.
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="http://www.entityframeworktutorial.net/code-first/what-is-code-first.aspx" target="_blank">Code First</a></td>
+                    <td>
+                        The Data Layer(data structrue) ara generated by entity code first mode, ode-First APIs will create the database on the fly based on your entity classes and configuration.
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="https://msdn.microsoft.com/en-us/library/bb397926.aspx" target="_blank">Linq</a></td>
+                    <td>
+                        Language-Integrated Query (LINQ) is an innovation introduced in the .NET Framework version 3.5 that bridges the gap between the world of objects and the world of data.
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="http://www.ryadel.com/en/setup-a-multi-language-website-using-asp-net-mvc/" target="_blank">Multi Language</a></td>
+                    <td>
+                        We use standard MVC multi-language support setting.
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="https://jquery.com/" target="_blank">JQuery</a></td>
+                    <td>
+                        Version: 2.1.4. jQuery is a fast, small, and feature-rich JavaScript library. It makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers. With a combination of versatility and extensibility, jQuery has changed the way that millions of people write JavaScript.
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="http://www.datatables.net/" target="_blank">JQuery.DataTable</a></td>
+                    <td>
+                        Version: 1.10.7. DataTables is a plug-in for the jQuery Javascript library. It is a highly flexible tool, based upon the foundations of progressive enhancement, and will add advanced interaction controls to any HTML table.
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="http://getbootstrap.com/" target="_blank">Bootstrap</a></td>
+                    <td>
+                        Version: 3.0. Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive, mobile first projects on the web.
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="http://npoi.codeplex.com/" target="_blank">NPOI</a></td>
+                    <td>
+                        Version: 2.2.1. This project is the .NET version of POI Java project at http://poi.apache.org/. POI is an open source project which can help you read/write xls, doc, ppt files. It has a wide application..
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+</div>

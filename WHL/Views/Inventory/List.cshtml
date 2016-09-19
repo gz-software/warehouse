@@ -1,0 +1,78 @@
+﻿@model IEnumerable<Inventory>
+<div class="container">
+
+        <table>
+            <tr>
+                <td><h2 id="tdStoreName"></h2></td>
+                <td ><h2 id="tdAll"></h2></td>
+                <td><h2> @LangHelper.Get("Inventory_Label_Inventories")</h2></td>
+            </tr>
+        </table>
+ 
+    <div style="width:100%;" align="right">
+        <button class="btn btn-default" data-toggle="modal" data-target="#" id="invOutboundBtn">
+            @LangHelper.Get("Delivery_Button_Outbound")
+        </button>
+        <button class="btn btn-default" data-toggle="modal" data-target="#" id="invInboundBtn">
+            @LangHelper.Get("Delivery_Button_Inbound")
+        </button>
+        <button class="btn btn-default" data-toggle="modal" data-target="#" id="invExportBtn">
+            @LangHelper.Get("Excel_Button_Export")
+        </button>
+        <button class="btn btn-default" data-toggle="modal"  data-target="#" id="invImportBtn">
+            @LangHelper.Get("Excel_Button_Import")
+        </button>
+    </div>
+    <table class="table table-striped display nowrap" id="invTable" cellspacing="0" >
+        <thead>
+            <tr>
+                <th style="padding-left:10px!important"><input name="select_all" value="1" id="invTableSelectAllBox" type="checkbox"></th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Product.SKU).ToString()
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Product.ShortTitle).ToString()
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Avail).ToString()
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.OnHold).ToString()
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.SwAvail).ToString()
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.OnIn).ToString()
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.OnOut).ToString()
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.InSum).ToString()
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.OutSum).ToString()
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.DiffSum).ToString()
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ShipMiss).ToString()
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Store.Name).ToString()
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Store.TypeLayout).ToString()
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.UpdateDateLayout).ToString()
+                </th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</div>
+
+

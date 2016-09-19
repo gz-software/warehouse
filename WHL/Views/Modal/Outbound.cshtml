@@ -1,0 +1,101 @@
+﻿<!-- 出货模态框（OutBound Modal） -->
+<div class="modal fade" id="outboundModal" tabindex="-1" role="dialog" aria-labelledby="outModalLabel" aria-hidden="true">
+    <div class="modal-dialog" style="width:1200px;">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title" id="obModalLabel">
+                    @LangHelper.Get("Delivery_Label_OutboundDelivery")&nbsp;<span id="obSrcStoreNameSpan">@LangHelper.Get("Store_Label_All")</span>
+                </h4>
+            </div>
+            <div class="modal-body">
+                <form class="form-horizontal" id="obForm">
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">@LangHelper.Get("Delivery_Label_DON")</label>
+                        <div class="col-sm-4">
+                            <select id="obDeliverySelect" name="ID" class="form-control"></select>
+                        </div>
+
+                        <label class="col-sm-2 control-label">@LangHelper.Get("Delivery_Label_Carriers")</label>
+                        <div class="col-sm-4">
+                            <select id="obCarrierSelect" class="form-control"></select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-sm-2 control-label">@LangHelper.Get("Delivery_Label_FromStore")</label>
+                        <div class="col-sm-4">
+                            <select id="obSrcStoreSelect"  class="form-control"></select>
+                        </div>
+
+                        <label class="col-sm-2 control-label" id="tarStoreLbl">@LangHelper.Get("Delivery_Label_ToStore")</label>
+                        <div class="col-sm-4" id="tarStoreDiv">
+                            <select id="obTarStoreSelect"  class="form-control"></select>
+                        </div>
+                    </div>
+               
+                    <div class="container">
+                        <div align="right">
+                            <button type="button" id="obAddOutItemBtn" class="btn btn-info" onclick="obAddItems()">@LangHelper.Get("Common_Button_Add")</button>
+                            <button type="button" id="obDeleteOutItemBtn" class="btn btn-danger" onclick="obDeleteItems()">@LangHelper.Get("Common_Button_Delete")</button>
+                        </div>
+                        <table  id="obTable" >
+                            <thead>
+                                <tr>
+                                    <th style="width:10%;padding-left:10px!important" id="obChkboxTH"><input name="select_all" value="1" id="obTableSelectAllBox" type="checkbox"></th>
+                                    <th style="width:25%;">
+                                        @LangHelper.Get("Delivery_Label_SKU")
+                                    </th>
+                                    <th style="width:25%;">
+                                        @LangHelper.Get("Delivery_Label_Product")
+                                    </th>
+                                    <th style="width:25%;">
+                                        @LangHelper.Get("Delivery_Label_OutQty")
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                    <div style="display:none;">
+                        obDeliveryType:<input id="obDeliveryType" name="DeliveryType" /><br/>
+                        obVersion: <input id="obVersion" name="Version" /><br />
+                        obCarrierID: <input id="obCarrierID" name="CarrierID" /><br />
+                        obSrcStoreID:<input id="obSrcStoreID" name="SrcStoreID" /><br />
+                        obTarStoreID:<input id="obTarStoreID" name="TarStoreID" /><br />
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" id="obCloseBtn" onclick="obModalClose();">
+                    @LangHelper.Get("Common_Button_Close")
+                </button>
+                <button type="button" class="btn btn-warning" id="obShowDataBtn" onclick="obShowData();" style="display:none">
+                    @LangHelper.Get("Common_Button_ShowPostData")
+                </button>
+                <button type="button" class="btn btn-warning" id="obShipmentBtn" onclick="obShipment();" style="display:none">
+                    @LangHelper.Get("Delivery_Button_Shipment")
+                </button>
+
+                <button type="button" class="btn btn-danger" id="obDeleteDeliveryBtn" onclick="obDeleteDelivery();" style="display:none">
+                    @LangHelper.Get("Delivery_Button_Delete")
+                </button>
+
+                <button type="button" class="btn btn-danger" id="obCancelDeliveryBtn" onclick="obCancelDelivery();" style="display:none">
+                    @LangHelper.Get("Delivery_Button_Cancel")
+                </button>
+
+                <button type="button" class="btn btn-success" id="obSubmitDeliveryBtn" onclick="obSubmitDelivery();" style="display:none">
+                    @LangHelper.Get("Common_Button_Save")
+                </button>
+                <button type="button" class="btn btn-primary" id="obProcessDeliveryBtn" onclick="obProcessDelivery();" style="display:none">
+                    @LangHelper.Get("Delivery_Button_Process")
+                </button>
+                <button type="button" class="btn btn-primary" id="obShipDeliveryBtn" onclick="obShipDelivery();" style="display:none">
+                    @LangHelper.Get("Delivery_Button_Ship") 
+                </button>
+
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
